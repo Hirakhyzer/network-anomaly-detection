@@ -109,14 +109,9 @@ def run_baseline(model_name: str, prepared: dict[str, Any], config: dict[str, An
     else:
         raise ValueError(f"Unsupported baseline: {model_name}")
     return _result(
-        model_name,
-        test_windows.y,
-        test_scores,
-        validation_scores[validation_windows.y == 0],
-        test_windows.timestamps,
-        test_windows.hosts,
-        output_dir,
-        quantile,
+        model_name, test_windows.y, test_scores,
+        validation_scores[validation_windows.y == 0], test_windows.timestamps,
+        test_windows.hosts, output_dir, quantile,
     )
 
 
@@ -141,24 +136,16 @@ def run_sequence_autoencoder(model_name: str, prepared: dict[str, Any], config: 
     else:
         raise ValueError(f"Unsupported sequence autoencoder: {model_name}")
     fit_reconstruction_model(
-        model,
-        normal_only(train_windows),
-        normal_only(validation_windows),
-        epochs=int(models["epochs"]),
-        batch_size=int(models["batch_size"]),
+        model, normal_only(train_windows), normal_only(validation_windows),
+        epochs=int(models["epochs"]), batch_size=int(models["batch_size"]),
         learning_rate=float(models["learning_rate"]),
     )
     validation_scores = score_reconstruction_model(model, validation_windows.x)
     test_scores = score_reconstruction_model(model, test_windows.x)
     return _result(
-        model_name,
-        test_windows.y,
-        test_scores,
-        validation_scores[validation_windows.y == 0],
-        test_windows.timestamps,
-        test_windows.hosts,
-        output_dir,
-        float(models["threshold_quantile"]),
+        model_name, test_windows.y, test_scores,
+        validation_scores[validation_windows.y == 0], test_windows.timestamps,
+        test_windows.hosts, output_dir, float(models["threshold_quantile"]),
     )
 
 
@@ -172,29 +159,20 @@ def run_graph_autoencoder(prepared: dict[str, Any], config: dict[str, Any], outp
     validation_x, validation_y, validation_timestamps, _ = make_graph_windows(prepared["validation"], window_size, graph_hosts)
     test_x, test_y, test_timestamps, _ = make_graph_windows(prepared["test"], window_size, graph_hosts)
     model = GraphTemporalAutoencoder(
-        n_features=train_x.shape[-1],
-        adjacency=adjacency,
-        hidden_dim=int(models["hidden_dim"]),
-        dropout=float(models["dropout"]),
+        n_features=train_x.shape[-1], adjacency=adjacency,
+        hidden_dim=int(models["hidden_dim"]), dropout=float(models["dropout"]),
     )
     fit_reconstruction_model(
-        model,
-        train_x[train_y == 0],
-        validation_x[validation_y == 0],
-        epochs=int(models["epochs"]),
-        batch_size=int(models["batch_size"]),
+        model, train_x[train_y == 0], validation_x[validation_y == 0],
+        epochs=int(models["epochs"]), batch_size=int(models["batch_size"]),
         learning_rate=float(models["learning_rate"]),
     )
     validation_scores = score_reconstruction_model(model, validation_x)
     test_scores = score_reconstruction_model(model, test_x)
     return _result(
-        "graph_temporal_ae",
-        test_y,
-        test_scores,
-        validation_scores[validation_y == 0],
-        test_timestamps,
-        np.repeat("graph-window", len(test_timestamps)),
-        output_dir,
+        "graph_temporal_ae", test_y, test_scores,
+        validation_scores[validation_y == 0], test_timestamps,
+        np.repeat("graph-window", len(test_timestamps)), output_dir,
         float(models["threshold_quantile"]),
     )
 
@@ -217,8 +195,17 @@ def run_experiment(config: dict[str, Any], requested_model: str = "all") -> pd.D
             results.append(run_sequence_autoencoder(model_name, prepared, config, output_dir))
         else:
             results.append(run_graph_autoencoder(prepared, config, output_dir))
-    summary = pd.DataFrame(results).sort_values("f1", ascending=False)
-    summary.to_csv(output_dir / "metrics_summary.csv", index=False)
+
+    new_results = pd.DataFrame(results)
+    metrics_path = output_dir / "metrics_summary.csv"
+    if metrics_path.exists():
+        existing = pd.read_csv(metrics_path)
+        existing = existing[~existing["model"].isin(requested)]
+        summary = pd.concat([existing, new_results], ignore_index=True)
+    else:
+        summary = new_results
+    summary = summary.sort_values("f1", ascending=False).reset_index(drop=True)
+    summary.to_csv(metrics_path, index=False)
     manifest = {
         "seed": config["seed"],
         "models": requested,
