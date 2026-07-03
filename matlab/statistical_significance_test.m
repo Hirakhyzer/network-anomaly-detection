@@ -29,7 +29,8 @@ end
 
 [p, table_stats, stats] = friedman(values, 1, 'off');
 fprintf('Friedman test p-value: %.6f\n', p);
-disp(array2table(table_stats, 'VariableNames', {'Source', 'SS', 'df', 'MS', 'ChiSquare', 'pValue'}));
+disp('Friedman ANOVA output:');
+disp(table_stats);
 
 pairwise = multcompare(stats, 'Display', 'off');
 pair_table = array2table(pairwise, 'VariableNames', {'ModelA', 'ModelB', 'LowerCI', 'Difference', 'UpperCI', 'pValue'});
