@@ -1,0 +1,33 @@
+seed: 42
+output_dir: results
+
+data:
+  n_hosts: 8
+  n_steps: 900
+  frequency_minutes: 5
+  anomaly_fraction: 0.08
+  normal_noise: 0.08
+  window_size: 24
+  train_fraction: 0.60
+  validation_fraction: 0.20
+
+models:
+  hidden_dim: 48
+  latent_dim: 20
+  transformer_heads: 4
+  transformer_layers: 2
+  dropout: 0.10
+  epochs: 14
+  batch_size: 64
+  learning_rate: 0.001
+  threshold_quantile: 0.995
+
+evaluation:
+  alert_threshold_quantile: 0.995
+  detector_names:
+    - zscore
+    - rolling_mad
+    - isolation_forest
+    - lstm_ae
+    - transformer_ae
+    - graph_temporal_ae
