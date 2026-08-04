@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: Trustworthy Network Anomaly Detection Lab
+message: If you use this repository in academic work, please cite it using this metadata.
+type: software
+authors:
+  - family-names: Khyzer
+    given-names: Hira
+repository-code: https://github.com/Hirakhyzer/network-anomaly-detection
+abstract: A reproducible cybersecurity and machine-learning research lab for comparing transparent baselines, deep sequence models, and graph-temporal detectors on labelled network telemetry.
+keywords:
+  - network anomaly detection
+  - cybersecurity
+  - machine learning
+  - deep learning
+  - graph-temporal modeling
+  - reproducible research
+license: MIT
+version: 0.1.0
+date-released: 2026-08-05
