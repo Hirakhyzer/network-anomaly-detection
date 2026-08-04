@@ -1,0 +1,59 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Network anomaly detection research workflow</title>
+  <desc id="desc">A pipeline from telemetry generation to chronological split, normal-only preprocessing, detector training, validation thresholding, test evaluation, and reporting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#020617"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="line" x1="80" y1="260" x2="1120" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#38BDF8"/><stop offset="0.5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+  </defs>
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <text x="60" y="72" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="800">Leakage-aware anomaly detection workflow</text>
+  <text x="62" y="104" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">A reproducible research path from synthetic telemetry to defensible evaluation.</text>
+  <path d="M112 260H1090" stroke="url(#line)" stroke-width="6" stroke-linecap="round"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g transform="translate(60 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#38BDF8" opacity="0.22"/><text x="73" y="56" fill="#7DD3FC" font-size="24" font-weight="800">1</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Telemetry</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Generate labelled</text><text x="22" y="138" fill="#94A3B8" font-size="13">multi-host traffic</text>
+    </g>
+    <g transform="translate(225 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#8B5CF6" opacity="0.22"/><text x="73" y="56" fill="#C4B5FD" font-size="24" font-weight="800">2</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Split</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Chronological train,</text><text x="22" y="138" fill="#94A3B8" font-size="13">validation, test</text>
+    </g>
+    <g transform="translate(390 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#10B981" opacity="0.22"/><text x="73" y="56" fill="#6EE7B7" font-size="24" font-weight="800">3</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Preprocess</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Fit only on normal</text><text x="22" y="138" fill="#94A3B8" font-size="13">training traffic</text>
+    </g>
+    <g transform="translate(555 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#F97316" opacity="0.22"/><text x="73" y="56" fill="#FDBA74" font-size="24" font-weight="800">4</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Fit detector</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Train baselines or</text><text x="22" y="138" fill="#94A3B8" font-size="13">deep models</text>
+    </g>
+    <g transform="translate(720 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#38BDF8" opacity="0.22"/><text x="73" y="56" fill="#7DD3FC" font-size="24" font-weight="800">5</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Threshold</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Select using normal</text><text x="22" y="138" fill="#94A3B8" font-size="13">validation scores</text>
+    </g>
+    <g transform="translate(885 185)">
+      <rect width="165" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="82" cy="48" r="22" fill="#8B5CF6" opacity="0.22"/><text x="73" y="56" fill="#C4B5FD" font-size="24" font-weight="800">6</text>
+      <text x="22" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Evaluate</text>
+      <text x="22" y="119" fill="#94A3B8" font-size="13">Held-out test</text><text x="22" y="138" fill="#94A3B8" font-size="13">metrics and curves</text>
+    </g>
+    <g transform="translate(1050 185)">
+      <rect width="110" height="150" rx="22" fill="#0F172A" stroke="#334155"/>
+      <circle cx="55" cy="48" r="22" fill="#10B981" opacity="0.22"/><text x="46" y="56" fill="#6EE7B7" font-size="24" font-weight="800">7</text>
+      <text x="21" y="93" fill="#F8FAFC" font-size="17" font-weight="800">Report</text>
+      <text x="21" y="119" fill="#94A3B8" font-size="13">Export</text><text x="21" y="138" fill="#94A3B8" font-size="13">figures</text>
+    </g>
+  </g>
+  <rect x="64" y="395" width="1072" height="64" rx="18" fill="#0F172A" stroke="#334155"/>
+  <text x="92" y="423" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">Core research constraint</text>
+  <text x="92" y="447" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Do not tune preprocessing, model thresholds, or hyperparameters using held-out test labels.</text>
+</svg>
