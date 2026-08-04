@@ -1,0 +1,72 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Trustworthy Network Anomaly Detection Lab</title>
+  <desc id="desc">A dark cybersecurity-themed banner with network nodes, telemetry curves, and anomaly alert cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.45" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="40" x2="1050" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.45" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.75 0 0 0 0 1 0 0 0 .42 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="34" fill="url(#bg)"/>
+  <circle cx="1040" cy="72" r="160" fill="#38BDF8" opacity="0.08"/>
+  <circle cx="880" cy="315" r="210" fill="#8B5CF6" opacity="0.10"/>
+  <circle cx="160" cy="300" r="180" fill="#10B981" opacity="0.08"/>
+
+  <g opacity="0.34">
+    <path d="M78 75H1124" stroke="#334155"/>
+    <path d="M78 125H1124" stroke="#334155"/>
+    <path d="M78 175H1124" stroke="#334155"/>
+    <path d="M78 225H1124" stroke="#334155"/>
+    <path d="M78 275H1124" stroke="#334155"/>
+    <path d="M160 48V314" stroke="#334155"/>
+    <path d="M300 48V314" stroke="#334155"/>
+    <path d="M440 48V314" stroke="#334155"/>
+    <path d="M580 48V314" stroke="#334155"/>
+    <path d="M720 48V314" stroke="#334155"/>
+    <path d="M860 48V314" stroke="#334155"/>
+    <path d="M1000 48V314" stroke="#334155"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M115 248C165 232 192 202 238 211C286 221 301 170 344 165C400 158 430 240 483 224C524 211 539 154 584 146C641 136 674 221 730 210C775 201 792 152 835 143C896 130 919 220 978 211C1028 203 1053 157 1090 149" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="584" cy="146" r="9" fill="#F97316"/>
+    <circle cx="835" cy="143" r="9" fill="#F97316"/>
+    <circle cx="978" cy="211" r="7" fill="#38BDF8"/>
+  </g>
+
+  <g opacity="0.95">
+    <line x1="765" y1="96" x2="835" y2="143" stroke="#475569" stroke-width="2"/>
+    <line x1="835" y1="143" x2="920" y2="104" stroke="#475569" stroke-width="2"/>
+    <line x1="835" y1="143" x2="884" y2="222" stroke="#475569" stroke-width="2"/>
+    <line x1="884" y1="222" x2="978" y2="211" stroke="#475569" stroke-width="2"/>
+    <circle cx="765" cy="96" r="12" fill="#38BDF8"/>
+    <circle cx="920" cy="104" r="10" fill="#22C55E"/>
+    <circle cx="884" cy="222" r="11" fill="#8B5CF6"/>
+    <circle cx="835" cy="143" r="15" fill="#F97316"/>
+    <circle cx="978" cy="211" r="12" fill="#38BDF8"/>
+  </g>
+
+  <rect x="90" y="70" width="510" height="190" rx="26" fill="#020617" opacity="0.72" stroke="#334155"/>
+  <text x="120" y="123" fill="#E0F2FE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="3">CYBERSECURITY + ML</text>
+  <text x="120" y="169" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="44" font-weight="800">Network Anomaly</text>
+  <text x="120" y="215" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="44" font-weight="800">Detection Lab</text>
+  <text x="120" y="246" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Reproducible baselines · deep sequence models · graph-temporal intelligence</text>
+
+  <g transform="translate(700 245)">
+    <rect width="350" height="64" rx="18" fill="#0F172A" stroke="#334155"/>
+    <circle cx="34" cy="32" r="12" fill="#F97316"/>
+    <text x="58" y="27" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">Anomaly alert</text>
+    <text x="58" y="47" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Host cluster drift detected · validation threshold exceeded</text>
+  </g>
+</svg>
