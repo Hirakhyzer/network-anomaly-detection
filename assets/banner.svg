@@ -1,72 +1,76 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Trustworthy Network Anomaly Detection Lab</title>
-  <desc id="desc">A dark cybersecurity-themed banner with network nodes, telemetry curves, and anomaly alert cards.</desc>
+<svg width="1400" height="460" viewBox="0 0 1400 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Trustworthy Network Anomaly Detection Lab banner</title>
+  <desc id="desc">Professional dark academic banner showing telemetry, anomaly scoring, and trustworthy network anomaly detection.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="460" gradientUnits="userSpaceOnUse">
       <stop stop-color="#020617"/>
-      <stop offset="0.45" stop-color="#111827"/>
-      <stop offset="1" stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
     </linearGradient>
-    <linearGradient id="accent" x1="120" y1="40" x2="1050" y2="320" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#38BDF8"/>
-      <stop offset="0.45" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.75 0 0 0 0 1 0 0 0 .42 0"/>
-      <feBlend in="SourceGraphic" mode="screen"/>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.28"/>
     </filter>
   </defs>
-  <rect width="1200" height="360" rx="34" fill="url(#bg)"/>
-  <circle cx="1040" cy="72" r="160" fill="#38BDF8" opacity="0.08"/>
-  <circle cx="880" cy="315" r="210" fill="#8B5CF6" opacity="0.10"/>
-  <circle cx="160" cy="300" r="180" fill="#10B981" opacity="0.08"/>
 
-  <g opacity="0.34">
-    <path d="M78 75H1124" stroke="#334155"/>
-    <path d="M78 125H1124" stroke="#334155"/>
-    <path d="M78 175H1124" stroke="#334155"/>
-    <path d="M78 225H1124" stroke="#334155"/>
-    <path d="M78 275H1124" stroke="#334155"/>
-    <path d="M160 48V314" stroke="#334155"/>
-    <path d="M300 48V314" stroke="#334155"/>
-    <path d="M440 48V314" stroke="#334155"/>
-    <path d="M580 48V314" stroke="#334155"/>
-    <path d="M720 48V314" stroke="#334155"/>
-    <path d="M860 48V314" stroke="#334155"/>
-    <path d="M1000 48V314" stroke="#334155"/>
+  <rect width="1400" height="460" rx="34" fill="url(#bg)"/>
+  <circle cx="1180" cy="92" r="230" fill="#38BDF8" opacity="0.08"/>
+  <circle cx="1320" cy="390" r="210" fill="#8B5CF6" opacity="0.08"/>
+  <path d="M0 390 C180 330 320 430 520 370 C740 306 900 362 1080 314 C1210 279 1302 289 1400 250 V460 H0 Z" fill="#0EA5E9" opacity="0.05"/>
+
+  <g transform="translate(72 74)">
+    <rect x="0" y="0" width="720" height="312" rx="30" fill="#0B1220" stroke="#243244" stroke-width="1.5" filter="url(#soft)"/>
+    <rect x="38" y="36" width="268" height="38" rx="19" fill="#0F2A3E" stroke="#155E75"/>
+    <text x="58" y="61" fill="#7DD3FC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" letter-spacing="1.8">RESEARCH-GRADE CYBERSECURITY ML</text>
+
+    <text x="38" y="126" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="45" font-weight="900">Trustworthy Network</text>
+    <text x="38" y="178" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="45" font-weight="900">Anomaly Detection Lab</text>
+    <text x="40" y="222" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">Leakage-aware evaluation · transparent baselines · deep sequence models · graph-temporal learning</text>
+
+    <g transform="translate(38 256)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">
+      <rect width="148" height="38" rx="19" fill="#102A43" stroke="#38BDF8"/><text x="22" y="25" fill="#BAE6FD">Telemetry</text>
+      <rect x="166" width="150" height="38" rx="19" fill="#2A174E" stroke="#8B5CF6"/><text x="187" y="25" fill="#DDD6FE">Detectors</text>
+      <rect x="334" width="150" height="38" rx="19" fill="#0F2F26" stroke="#10B981"/><text x="355" y="25" fill="#BBF7D0">Evaluation</text>
+      <rect x="502" width="150" height="38" rx="19" fill="#331F15" stroke="#F97316"/><text x="523" y="25" fill="#FED7AA">Alerts</text>
+    </g>
   </g>
 
-  <g filter="url(#glow)">
-    <path d="M115 248C165 232 192 202 238 211C286 221 301 170 344 165C400 158 430 240 483 224C524 211 539 154 584 146C641 136 674 221 730 210C775 201 792 152 835 143C896 130 919 220 978 211C1028 203 1053 157 1090 149" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="584" cy="146" r="9" fill="#F97316"/>
-    <circle cx="835" cy="143" r="9" fill="#F97316"/>
-    <circle cx="978" cy="211" r="7" fill="#38BDF8"/>
-  </g>
+  <g transform="translate(850 72)" filter="url(#soft)">
+    <rect x="0" y="0" width="470" height="316" rx="30" fill="url(#panel)" stroke="#334155" stroke-width="1.5"/>
+    <text x="34" y="48" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="900">Anomaly score stream</text>
+    <text x="34" y="76" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">synthetic multi-host telemetry · held-out test period</text>
 
-  <g opacity="0.95">
-    <line x1="765" y1="96" x2="835" y2="143" stroke="#475569" stroke-width="2"/>
-    <line x1="835" y1="143" x2="920" y2="104" stroke="#475569" stroke-width="2"/>
-    <line x1="835" y1="143" x2="884" y2="222" stroke="#475569" stroke-width="2"/>
-    <line x1="884" y1="222" x2="978" y2="211" stroke="#475569" stroke-width="2"/>
-    <circle cx="765" cy="96" r="12" fill="#38BDF8"/>
-    <circle cx="920" cy="104" r="10" fill="#22C55E"/>
-    <circle cx="884" cy="222" r="11" fill="#8B5CF6"/>
-    <circle cx="835" cy="143" r="15" fill="#F97316"/>
-    <circle cx="978" cy="211" r="12" fill="#38BDF8"/>
-  </g>
+    <g transform="translate(34 104)">
+      <line x1="0" y1="150" x2="400" y2="150" stroke="#334155"/>
+      <line x1="0" y1="95" x2="400" y2="95" stroke="#1E293B"/>
+      <line x1="0" y1="40" x2="400" y2="40" stroke="#1E293B"/>
+      <path d="M0 126 C28 112 48 121 72 111 C95 101 116 128 142 112 C168 96 190 118 212 108 C236 97 260 124 282 105 C306 82 330 108 352 88 C374 69 386 94 400 82" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path d="M0 144 C44 138 82 146 122 136 C170 123 214 140 258 126 C312 109 354 118 400 102" stroke="#10B981" stroke-width="4" opacity="0.9" stroke-linecap="round" fill="none"/>
+      <line x1="0" y1="58" x2="400" y2="58" stroke="#F97316" stroke-width="3" stroke-dasharray="8 9"/>
+      <circle cx="351" cy="88" r="12" fill="#F97316"/>
+      <circle cx="351" cy="88" r="24" fill="#F97316" opacity="0.15"/>
+      <text x="312" y="28" fill="#FDBA74" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">alert</text>
+    </g>
 
-  <rect x="90" y="70" width="510" height="190" rx="26" fill="#020617" opacity="0.72" stroke="#334155"/>
-  <text x="120" y="123" fill="#E0F2FE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="3">CYBERSECURITY + ML</text>
-  <text x="120" y="169" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="44" font-weight="800">Network Anomaly</text>
-  <text x="120" y="215" fill="#FFFFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="44" font-weight="800">Detection Lab</text>
-  <text x="120" y="246" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Reproducible baselines · deep sequence models · graph-temporal intelligence</text>
-
-  <g transform="translate(700 245)">
-    <rect width="350" height="64" rx="18" fill="#0F172A" stroke="#334155"/>
-    <circle cx="34" cy="32" r="12" fill="#F97316"/>
-    <text x="58" y="27" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">Anomaly alert</text>
-    <text x="58" y="47" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Host cluster drift detected · validation threshold exceeded</text>
+    <g transform="translate(34 274)" font-family="Inter,Segoe UI,Arial,sans-serif">
+      <rect width="118" height="24" rx="12" fill="#0F2A3E"/><text x="16" y="17" fill="#7DD3FC" font-size="12" font-weight="800">PR-AUC</text>
+      <rect x="138" width="118" height="24" rx="12" fill="#0F2F26"/><text x="154" y="17" fill="#86EFAC" font-size="12" font-weight="800">F1</text>
+      <rect x="276" width="124" height="24" rx="12" fill="#331F15"/><text x="292" y="17" fill="#FDBA74" font-size="12" font-weight="800">Delay</text>
+    </g>
   </g>
 </svg>
