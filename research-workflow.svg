@@ -1,0 +1,100 @@
+<svg width="1400" height="760" viewBox="0 0 1400 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Leakage-aware anomaly detection workflow</title>
+  <desc id="desc">Aligned workflow diagram for reproducible network anomaly detection research.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#020617"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
+    <linearGradient id="bar" x1="80" y1="0" x2="1320" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#38BDF8"/><stop offset="0.52" stop-color="#8B5CF6"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.26"/></filter>
+  </defs>
+  <rect width="1400" height="760" rx="34" fill="url(#bg)"/>
+  <circle cx="1220" cy="90" r="250" fill="#38BDF8" opacity="0.06"/>
+  <circle cx="180" cy="720" r="260" fill="#8B5CF6" opacity="0.06"/>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="70" y="72" fill="#F8FAFC" font-size="38" font-weight="900">Leakage-aware anomaly detection workflow</text>
+    <text x="72" y="108" fill="#94A3B8" font-size="18">A reproducible research path from synthetic telemetry to held-out evaluation and reporting.</text>
+  </g>
+
+  <rect x="70" y="148" width="1260" height="8" rx="4" fill="url(#bar)" opacity="0.95"/>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" filter="url(#shadow)">
+    <g transform="translate(70 200)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#0F2A3E" stroke="#38BDF8"/>
+      <text x="47" y="65" fill="#7DD3FC" font-size="24" font-weight="900">1</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Telemetry</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Generate labelled</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">multi-host traffic</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">hosts · services · counters · events</text>
+    </g>
+
+    <g transform="translate(395 200)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#1F1648" stroke="#8B5CF6"/>
+      <text x="47" y="65" fill="#C4B5FD" font-size="24" font-weight="900">2</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Split</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Chronological train</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">validation and test</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">temporal ordering · no random leakage</text>
+    </g>
+
+    <g transform="translate(720 200)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#102A43" stroke="#38BDF8"/>
+      <text x="47" y="65" fill="#7DD3FC" font-size="24" font-weight="900">3</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Preprocess</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Fit scalers on normal</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">training traffic only</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">normal-only reference distribution</text>
+    </g>
+
+    <g transform="translate(1045 200)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#0F2F26" stroke="#10B981"/>
+      <text x="47" y="65" fill="#86EFAC" font-size="24" font-weight="900">4</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Train detector</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Baseline, classical ML,</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">deep, or graph model</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">same data protocol for all models</text>
+    </g>
+
+    <g transform="translate(235 470)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#331F15" stroke="#F97316"/>
+      <text x="47" y="65" fill="#FDBA74" font-size="24" font-weight="900">5</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Threshold</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Select alert threshold</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">from validation scores</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">no test-period tuning</text>
+    </g>
+
+    <g transform="translate(555 470)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#3A1730" stroke="#F43F5E"/>
+      <text x="47" y="65" fill="#FDA4AF" font-size="24" font-weight="900">6</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Evaluate</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Held-out test scores,</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">alerts, and delay</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">precision · recall · PR-AUC · FPR</text>
+    </g>
+
+    <g transform="translate(875 470)">
+      <rect width="290" height="180" rx="28" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="28" width="56" height="56" rx="18" fill="#0F2A3E" stroke="#22D3EE"/>
+      <text x="47" y="65" fill="#67E8F9" font-size="24" font-weight="900">7</text>
+      <text x="104" y="50" fill="#F8FAFC" font-size="22" font-weight="900">Report</text>
+      <text x="104" y="79" fill="#94A3B8" font-size="15">Export metrics, curves,</text>
+      <text x="104" y="101" fill="#94A3B8" font-size="15">and repeated-seed tables</text>
+      <text x="28" y="144" fill="#CBD5E1" font-size="15">figures · paper table · audit trail</text>
+    </g>
+  </g>
+
+  <g stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.95">
+    <path d="M360 290 H395"/>
+    <path d="M685 290 H720"/>
+    <path d="M1010 290 H1045"/>
+    <path d="M1190 380 C1190 430 1020 430 1020 470"/>
+    <path d="M875 560 H845"/>
+    <path d="M555 560 H525"/>
+  </g>
+</svg>
