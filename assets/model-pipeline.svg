@@ -1,69 +1,88 @@
-<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1400" height="780" viewBox="0 0 1400 780" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Network anomaly detection model pipeline</title>
-  <desc id="desc">A model comparison architecture diagram showing baselines, classical machine learning, deep sequence models, and graph-temporal detectors.</desc>
+  <desc id="desc">Aligned academic model pipeline comparing statistical, classical machine learning, deep sequence, and graph temporal anomaly detectors.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#020617"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
-    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38BDF8"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
-    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10B981"/><stop offset="1" stop-color="#38BDF8"/></linearGradient>
-    <linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F97316"/><stop offset="1" stop-color="#F43F5E"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="780" gradientUnits="userSpaceOnUse"><stop stop-color="#020617"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38BDF8"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10B981"/><stop offset="1" stop-color="#38BDF8"/></linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F97316"/><stop offset="1" stop-color="#F43F5E"/></linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.28"/></filter>
   </defs>
-  <rect width="1200" height="620" rx="30" fill="url(#bg)"/>
-  <text x="60" y="72" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="800">Model comparison pipeline</text>
-  <text x="62" y="104" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">Same dataset, same chronological split, same evaluation protocol — different detector families.</text>
 
-  <g transform="translate(62 160)">
-    <rect width="250" height="300" rx="26" fill="#0F172A" stroke="#334155"/>
-    <rect x="24" y="24" width="202" height="58" rx="18" fill="url(#a)" opacity="0.22"/>
-    <text x="34" y="60" fill="#E0F2FE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Telemetry windows</text>
-    <text x="28" y="118" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Host features</text>
-    <text x="28" y="150" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Protocol counters</text>
-    <text x="28" y="182" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Temporal sequences</text>
-    <text x="28" y="214" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Correlation graph</text>
-    <path d="M28 250H222" stroke="#334155"/>
-    <text x="28" y="278" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Input is split chronologically.</text>
+  <rect width="1400" height="780" rx="34" fill="url(#bg)"/>
+  <circle cx="1220" cy="140" r="260" fill="#38BDF8" opacity="0.06"/>
+  <circle cx="210" cy="700" r="260" fill="#8B5CF6" opacity="0.06"/>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="70" y="72" fill="#F8FAFC" font-size="38" font-weight="900">Model comparison pipeline</text>
+    <text x="72" y="108" fill="#94A3B8" font-size="18">One chronology-aware dataset protocol, multiple detector families, and a shared evaluation layer.</text>
   </g>
 
-  <path d="M330 310H404" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
-  <path d="M390 296L410 310L390 324" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" filter="url(#shadow)">
+    <g transform="translate(70 158)">
+      <rect width="290" height="470" rx="30" fill="#0B1220" stroke="#334155"/>
+      <rect x="30" y="30" width="230" height="70" rx="22" fill="#102A43" stroke="#38BDF8"/>
+      <text x="50" y="74" fill="#BAE6FD" font-size="22" font-weight="900">Telemetry windows</text>
+      <text x="30" y="145" fill="#CBD5E1" font-size="17">Host-level features</text>
+      <text x="30" y="184" fill="#CBD5E1" font-size="17">Protocol counters</text>
+      <text x="30" y="223" fill="#CBD5E1" font-size="17">Traffic aggregates</text>
+      <text x="30" y="262" fill="#CBD5E1" font-size="17">Temporal sequences</text>
+      <text x="30" y="301" fill="#CBD5E1" font-size="17">Graph context</text>
+      <rect x="30" y="360" width="230" height="56" rx="18" fill="#0F172A" stroke="#1E293B"/>
+      <text x="48" y="395" fill="#94A3B8" font-size="16" font-weight="800">normal-only training fit</text>
+    </g>
 
-  <g transform="translate(420 138)">
-    <rect width="300" height="92" rx="20" fill="#0F172A" stroke="#334155"/>
-    <circle cx="40" cy="46" r="18" fill="#38BDF8" opacity="0.25"/>
-    <text x="74" y="40" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800">Statistical baselines</text>
-    <text x="74" y="63" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Z-score · rolling median/MAD</text>
-  </g>
-  <g transform="translate(420 254)">
-    <rect width="300" height="92" rx="20" fill="#0F172A" stroke="#334155"/>
-    <circle cx="40" cy="46" r="18" fill="#10B981" opacity="0.25"/>
-    <text x="74" y="40" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800">Classical ML</text>
-    <text x="74" y="63" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Isolation Forest</text>
-  </g>
-  <g transform="translate(420 370)">
-    <rect width="300" height="92" rx="20" fill="#0F172A" stroke="#334155"/>
-    <circle cx="40" cy="46" r="18" fill="#8B5CF6" opacity="0.25"/>
-    <text x="74" y="40" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800">Deep sequence models</text>
-    <text x="74" y="63" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">LSTM AE · Transformer AE</text>
-  </g>
-  <g transform="translate(420 486)">
-    <rect width="300" height="92" rx="20" fill="#0F172A" stroke="#334155"/>
-    <circle cx="40" cy="46" r="18" fill="#F97316" opacity="0.25"/>
-    <text x="74" y="40" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800">Graph-temporal model</text>
-    <text x="74" y="63" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Host relation-aware AE</text>
+    <g transform="translate(410 158)">
+      <rect width="270" height="470" rx="30" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="30" width="214" height="56" rx="18" fill="#0F2A3E" stroke="#38BDF8"/>
+      <text x="49" y="66" fill="#7DD3FC" font-size="20" font-weight="900">Transparent baselines</text>
+      <text x="30" y="126" fill="#F8FAFC" font-size="19" font-weight="900">Z-score</text>
+      <text x="30" y="154" fill="#94A3B8" font-size="15">simple deviation detector</text>
+      <text x="30" y="211" fill="#F8FAFC" font-size="19" font-weight="900">Rolling median / MAD</text>
+      <text x="30" y="239" fill="#94A3B8" font-size="15">host-aware robust baseline</text>
+      <text x="30" y="315" fill="#F8FAFC" font-size="19" font-weight="900">Research value</text>
+      <text x="30" y="344" fill="#94A3B8" font-size="15">fast, explainable sanity</text>
+      <text x="30" y="366" fill="#94A3B8" font-size="15">checks before deep models</text>
+    </g>
+
+    <g transform="translate(720 158)">
+      <rect width="270" height="470" rx="30" fill="#0B1220" stroke="#334155"/>
+      <rect x="28" y="30" width="214" height="56" rx="18" fill="#1F1648" stroke="#8B5CF6"/>
+      <text x="56" y="66" fill="#C4B5FD" font-size="20" font-weight="900">Learning models</text>
+      <text x="30" y="126" fill="#F8FAFC" font-size="19" font-weight="900">Isolation Forest</text>
+      <text x="30" y="154" fill="#94A3B8" font-size="15">tabular unsupervised ML</text>
+      <text x="30" y="211" fill="#F8FAFC" font-size="19" font-weight="900">LSTM autoencoder</text>
+      <text x="30" y="239" fill="#94A3B8" font-size="15">temporal reconstruction</text>
+      <text x="30" y="296" fill="#F8FAFC" font-size="19" font-weight="900">Transformer autoencoder</text>
+      <text x="30" y="324" fill="#94A3B8" font-size="15">sequence attention patterns</text>
+      <text x="30" y="381" fill="#F8FAFC" font-size="19" font-weight="900">Graph-temporal AE</text>
+      <text x="30" y="409" fill="#94A3B8" font-size="15">multi-host dependency signal</text>
+    </g>
+
+    <g transform="translate(1030 158)">
+      <rect width="300" height="470" rx="30" fill="#0B1220" stroke="#334155"/>
+      <rect x="30" y="30" width="240" height="56" rx="18" fill="#0F2F26" stroke="#10B981"/>
+      <text x="54" y="66" fill="#86EFAC" font-size="20" font-weight="900">Evaluation layer</text>
+      <text x="30" y="126" fill="#F8FAFC" font-size="19" font-weight="900">Thresholding</text>
+      <text x="30" y="154" fill="#94A3B8" font-size="15">validation-only score cutoff</text>
+      <text x="30" y="211" fill="#F8FAFC" font-size="19" font-weight="900">Held-out testing</text>
+      <text x="30" y="239" fill="#94A3B8" font-size="15">no tuning on test period</text>
+      <text x="30" y="296" fill="#F8FAFC" font-size="19" font-weight="900">Metrics</text>
+      <text x="30" y="324" fill="#94A3B8" font-size="15">precision, recall, F1,</text>
+      <text x="30" y="346" fill="#94A3B8" font-size="15">PR-AUC, FPR, delay</text>
+      <text x="30" y="403" fill="#F8FAFC" font-size="19" font-weight="900">Outputs</text>
+      <text x="30" y="431" fill="#94A3B8" font-size="15">figures, tables, audit trail</text>
+    </g>
   </g>
 
-  <path d="M738 310H812" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
-  <path d="M798 296L818 310L798 324" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#64748B" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.95">
+    <path d="M360 390 H410"/>
+    <path d="M680 390 H720"/>
+    <path d="M990 390 H1030"/>
+  </g>
 
-  <g transform="translate(838 160)">
-    <rect width="300" height="300" rx="26" fill="#0F172A" stroke="#334155"/>
-    <rect x="24" y="24" width="252" height="58" rx="18" fill="url(#c)" opacity="0.22"/>
-    <text x="40" y="60" fill="#FED7AA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Unified evaluation</text>
-    <text x="34" y="118" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Anomaly score export</text>
-    <text x="34" y="150" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Validation threshold</text>
-    <text x="34" y="182" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Held-out metrics</text>
-    <text x="34" y="214" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">ROC / PR curves</text>
-    <text x="34" y="246" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Detection delay</text>
-    <path d="M34 266H266" stroke="#334155"/>
-    <text x="34" y="292" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Same evaluation design across models.</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="220" y="674" width="960" height="56" rx="28" fill="#0B1220" stroke="#334155"/>
+    <text x="700" y="709" text-anchor="middle" fill="#CBD5E1" font-size="18" font-weight="800">Shared protocol: chronological split · normal-only fitting · validation threshold · held-out test metrics · repeated-seed analysis</text>
   </g>
 </svg>
