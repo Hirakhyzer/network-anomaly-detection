@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Trustworthy Network Anomaly Detection Lab banner" width="100%" />
+  <img src="assets/banner.png" alt="Trustworthy Network Anomaly Detection Lab banner" width="100%" />
 </p>
 
 <h1 align="center">Trustworthy Network Anomaly Detection Lab</h1>
@@ -27,7 +27,7 @@ The project is designed for academic and PhD-level experimentation where the goa
 The default dataset in this repository is **synthetic**. Results should be interpreted as performance on the configured generator and should not be presented as evidence of real enterprise-network performance without external validation.
 
 <p align="center">
-  <img src="assets/detection-dashboard.svg" alt="Network anomaly detection dashboard preview" width="92%" />
+  <img src="assets/detection-dashboard.png" alt="Network anomaly detection dashboard preview" width="92%" />
 </p>
 
 ---
@@ -66,7 +66,7 @@ This repository studies questions such as:
 ## Research workflow
 
 <p align="center">
-  <img src="assets/research-workflow.svg" alt="Research workflow preview" width="90%" />
+  <img src="assets/research-workflow.png" alt="Research workflow preview" width="90%" />
 </p>
 
 ```text
@@ -85,7 +85,7 @@ Generate labelled telemetry
 ## Model family
 
 <p align="center">
-  <img src="assets/model-pipeline.svg" alt="Model pipeline preview" width="92%" />
+  <img src="assets/model-pipeline.png" alt="Model pipeline preview" width="92%" />
 </p>
 
 | Category | Methods | Research value |
@@ -121,10 +121,10 @@ network-anomaly-detection/
 ├── README.md
 ├── requirements.txt
 ├── assets/
-│   ├── banner.svg
-│   ├── detection-dashboard.svg
-│   ├── model-pipeline.svg
-│   └── research-workflow.svg
+│   ├── banner.png
+│   ├── detection-dashboard.png
+│   ├── model-pipeline.png
+│   └── research-workflow.png
 ├── configs/
 │   └── Reproducible experiment settings
 ├── src/nadlab/
